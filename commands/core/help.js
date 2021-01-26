@@ -6,8 +6,8 @@ module.exports = {
 
     execute(client, message, args) {
         if (!args[0]) {
-            const infos = message.client.commands.filter(x => x.category == 'Infos').map((x) => '`' + x.name + '`').join(', ');
-            const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
+            const infos = message.client.commands.filter(x => x.category == '정보').map((x) => '`' + x.name + '`').join(', ');
+            const music = message.client.commands.filter(x => x.category == '음악').map((x) => '`' + x.name + '`').join(', ');
 
             message.channel.send({
                 embed: {
@@ -15,12 +15,12 @@ module.exports = {
                     author: { name: '' },
                     footer: { text: '' },
                     fields: [
-                        { name: 'Bot', value: infos },
-                        { name: 'Music', value: music },
-                        { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
+                        { name: '봇', value: infos },
+                        { name: '음악', value: music },
+                        { name: '맛있다', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
-                    description: `To use filters, ${client.config.discord.prefix}filter (the filter). Example : ${client.config.discord.prefix}filter 8D.`,
+                    description: `음 맛있다`,
                 },
             });
         } else {
@@ -40,7 +40,7 @@ module.exports = {
                         { name: '사용법', value: command.utilisation.replace('{prefix}', client.config.discord.prefix), inline: true },
                     ],
                     timestamp: new Date(),
-                    description: 'Find information on the command provided.\nMandatory arguments `[]`, optional arguments `<>`.',
+                    description: '',
                 }
             });
         };
