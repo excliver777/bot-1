@@ -13,5 +13,5 @@ module.exports = {
         activity: '시즈닝 도움',
     },
 
-    filters: [],
+    filters: ['msg'],
 };
