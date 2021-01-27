@@ -17,7 +17,7 @@ module.exports = {
                     fields: [
                         { name: '봇', value: infos },
                         { name: '음악', value: music },
-                        { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
+                        { name: '봇에 들어간 재료들', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
                     description: `"시즈닝" 을 붙여 명령해보세요`,
