@@ -11,7 +11,7 @@ module.exports = {
 
         const queue = client.player.getQueue(message);
 
-        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} - 아무노래 플레이하고 있지않음`);
+        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error}  아무노래 플레이하고 있지않음`);
 
         message.channel.send(`**서버 재생목록 - ${message.guild.name} ${client.emotes.queue} ${client.player.getQueue(message).loopMode ? '(looped)' : ''}**\n현재재생중 : ${queue.playing.title} | ${queue.playing.author}\n\n` + (queue.tracks.map((track, i) => {
             return `**#${i + 1}** - ${track.title} | ${track.author} (신청한 사람 : ${track.requestedBy.username})`

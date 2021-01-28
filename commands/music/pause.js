@@ -5,7 +5,7 @@ module.exports = {
     utilisation: '{prefix}pause',
 
     execute(client, message) {
-        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} -  보이스 채널 참가조옴 !`);
+        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error}   보이스 채널 참가조옴 !`);
 
         if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} 같은 보이스 채널에 있어주세요`);
 
@@ -15,6 +15,6 @@ module.exports = {
 
         client.player.pause(message);
 
-        message.channel.send(`${client.emotes.success} - Song ${client.player.getQueue(message).playing.title}멈춤`);
+        message.channel.send(`${client.emotes.success}  Song ${client.player.getQueue(message).playing.title}멈춤`);
     },
 };

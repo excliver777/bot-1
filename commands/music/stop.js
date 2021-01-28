@@ -5,15 +5,15 @@ module.exports = {
     utilisation: '{prefix}stop',
 
     execute(client, message) {
-        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
+        if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} 보이스 채널 참가 부탁드립니다 손님^^`);
 
-        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} - You are not in the same voice channel !`);
+        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} 같은 보이스채널 참가하고 계시지 않습니다.`);
 
-        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} - No music currently playing !`);
+        if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error}  아무노래 안틀고 있으신데 ㅇㅁㅇ`);
 
         client.player.setRepeatMode(message, false);
         client.player.stop(message);
 
-        message.channel.send(`${client.emotes.success} - Music **stopped** into this server !`);
+        message.channel.send(`${client.emotes.success}  성공적으로 **음악이 멈췄습니다**`);
     },
 };

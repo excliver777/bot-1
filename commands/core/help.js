@@ -34,7 +34,7 @@ module.exports = {
                     author: { name: '도움말' },
                     footer: { text: '조미료는 원래 조미래라는 분과 분리가 되서 생긴겁니다.' },
                     fields: [
-                        { name: 'Name', value: command.name, inline: true },
+                        { name: 'name', value: command.name, inline: true },
                         { name: 'Category', value: command.category, inline: true },
                         { name: 'Aliase(s)', value: command.aliases.length < 1 ? 'None' : command.aliases.join(', '), inline: true },
                         { name: 'Utilisation', value: command.utilisation.replace('{prefix}', client.config.discord.prefix), inline: true },

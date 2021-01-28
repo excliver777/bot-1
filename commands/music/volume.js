@@ -7,7 +7,7 @@ module.exports = {
     execute(client, message, args) {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error}보이스 채널 참가좀!`);
 
-        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} - 같은보이스 채널 참가해주세요`);
+        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error}  같은보이스 채널 참가해주세요`);
 
         if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} 아무음악 플레이안하는중!`);
 
