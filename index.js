@@ -4,9 +4,9 @@ const discord = require('discord.js');
 const client = new discord.Client({ disableMentions: 'everyone' });
 
 const { Player } = require('discord-player');
-
+const { config } = require('process');
 client.player = new Player(client);
-client.config = require('./config/bot');
+client.config = require('./config');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();

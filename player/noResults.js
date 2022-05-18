@@ -1,3 +1,3 @@
 module.exports = (client, message, query) => {
-    message.channel.send(`${client.emotes.error}  검색결과가 없습니다. ${query} !`);
+    message.channel.send(`${client.emotes.error}  there is no such thing as ${query} !`);
 };

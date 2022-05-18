@@ -1,8 +1,8 @@
 module.exports = {
-    name: '도움',
-    aliases: ['도움'],
+    name: 'music',
+    aliases: ['music'],
     category: 'Core',
-    utilisation: '{prefix}도움 <명령어>',
+    utilisation: '{prefix} music <command>',
 
     execute(client, message, args) {
         if (!args[0]) {
@@ -11,16 +11,16 @@ module.exports = {
 
             message.channel.send({
                 embed: {
-                    color: 'ORANGE',
-                    author: { name: '도움말' },
-                    footer: { text: '조미료는 원래 조미래라는 분과 분리가 되서 생긴겁니다.' },
+                    color: 'RANDOM',
+                    author: { name: 'Music Help' },
+                    footer: { text: '\nRefer:\nIf you need any help for specific command you can use this:\nExamples: (yoru) {help} [loop]' },
                     fields: [
-                        { name: '봇', value: infos },
-                        { name: '음악', value: music },
-                        { name: '봇에 들어간 재료들', value: client.filters.map((x) => '`' + x + '`').join(', ') },
+                        { name: 'debug', value: infos },
+                        { name: 'music', value: music },
+                        { name: 'For more help type:', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
-                    description: `"시즈닝" 을 붙여 명령해보세요`,
+                    description: `use command with "yoru"`,
                 },
             });
         } else {
@@ -30,9 +30,9 @@ module.exports = {
 
             message.channel.send({
                 embed: {
-                    color: 'ORANGE',
-                    author: { name: '도움말' },
-                    footer: { text: '조미료는 원래 조미래라는 분과 분리가 되서 생긴겁니다.' },
+                    color: 'RANDOM',
+                    author: { name: 'help' },
+                    footer: { text: 'If you need other help type `yoru help`' },
                     fields: [
                         { name: 'name', value: command.name, inline: true },
                         { name: 'Category', value: command.category, inline: true },
@@ -40,7 +40,7 @@ module.exports = {
                         { name: 'Utilisation', value: command.utilisation.replace('{prefix}', client.config.discord.prefix), inline: true },
                     ],
                     timestamp: new Date(),
-                    description: 'ㅇㅇㅇㅇ\nㅇㅇㅇㅇ `[]`, ㅇㅇㅇㅇ `<>`.',
+                    description: '',
                 }
             });
         };

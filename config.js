@@ -9,9 +9,9 @@ module.exports = {
 
     discord: {
         token: '',
-        prefix: '시즈닝 ',
-        activity: '시즈닝 도움',
+        prefix: 'yoru ',
+        activity: '',
     },
 
-    filters: ['msg(조미료)'],
+    filters: ['yoru help'],
 };

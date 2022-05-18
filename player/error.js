@@ -1,15 +1,15 @@
 module.exports = (client, error, message) => {
     switch (error) {
         case 'NotPlaying':
-            message.channel.send(`${client.emotes.error} 음악 재생중이 아님!`);
+            message.channel.send(`${client.emotes.error} no music playing`);
             break;
         case 'NotConnected':
-            message.channel.send(`${client.emotes.error}  보이스채널 참가좀 좀!!!! !`);
+            message.channel.send(`${client.emotes.error} JOIN VC jibai !`);
             break;
         case 'UnableToJoin':
-            message.channel.send(`${client.emotes.error}  권한부족 !`);
+            message.channel.send(`${client.emotes.error}  wait wait im lagging sorry ah, wait you try to connect again wo ai ni `);
             break;
         default:
-            message.channel.send(`${client.emotes.error}  에러뜸 : ${error}`);
+            message.channel.send(`${client.emotes.error} Error : ${error}`);
     };
 };
